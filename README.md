@@ -72,35 +72,35 @@ For more information about parameters and options, pass the argument "--help" to
                         the values side by side in a combined sheet.
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --threshold THRESHOLD, -t THRESHOLD
+  -h, --help            show this help message and exit  
+  --threshold THRESHOLD, -t THRESHOLD  
                         threshold for numeric values to be considered
                         different. e.g. when threshold = 0.01 if left and
                         right values are closer than 0,01 then consider the
                         same. Mainly affects coloring of difference column for
-                        numeric values
+                        numeric values  
   --open OPEN, -p OPEN  if true, open output file on completion using
                         os.system. Output file path must resolve to a file.
                         Adds quotes around file name so that paths with spaces
-                        can resolveon windows machines.
-  --compare_type COMPARE_TYPE, -c COMPARE_TYPE
+                        can resolveon windows machines.  
+  --compare_type COMPARE_TYPE, -c COMPARE_TYPE  
                         if set to 'sorted', the comparison tool will attempt
                         to line up each side based on the values of
                         sort_column specified. 'default' is a cell-by-cell
                         comparison.
-  --sort_column SORT_COLUMN, -s SORT_COLUMN
+  --sort_column SORT_COLUMN, -s SORT_COLUMN  
                         numeric offset (1-based) of column to use for sorting.
                         E.g. a primary key. if compare type is 'sorted', this
-                        column will be used to sort and line up each side
-  --has_header HAS_HEADER, -d HAS_HEADER
+                        column will be used to sort and line up each side  
+  --has_header HAS_HEADER, -d HAS_HEADER  
                         if sheets have headers, set to True so the headers can
                         be excluded from comparison
-  --sheet_matching SHEET_MATCHING, -m SHEET_MATCHING
+  --sheet_matching SHEET_MATCHING, -m SHEET_MATCHING  
                         can be either 'name' or 'order'. If name, only sheets
                         with the same name are compared. if order, sheets are
                         compared in order. E.g. 1st sheet vs 1st sheet.
-  --convert_csv CONVERT_CSV, -v CONVERT_CSV
-                        if True, convert csv files to xlsx
+  --convert_csv CONVERT_CSV, -v CONVERT_CSV  
+                        if True, convert csv files to xlsx  
 
 
 
