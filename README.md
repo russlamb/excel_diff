@@ -26,8 +26,6 @@ The script can use the values of a single column to line up the rows of the inpu
 
 ## Setup
 
-These instructions were made using the Windows 7 Operating system. Other operating systems should work similarly since cx\_freeze is cross platform.
-
 Prepare Python Environment
 --------------------------
 
@@ -117,8 +115,8 @@ optional arguments:
 If you get an error like this then you need to install the Microsoft Visual C++ package.
 
 ![System Error
-Q The program can’t start because api-ms-win-crt-stdio-l1-1-OdIl is
-‘ missing from your computer. Try reinstalling the program to fix this
+Q The program canâ€™t start because api-ms-win-crt-stdio-l1-1-OdIl is
+â€˜ missing from your computer. Try reinstalling the program to fix this
 problem.](https://i.imgur.com/eTgqVN4.png)
 
 
