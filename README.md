@@ -34,29 +34,21 @@ The necessary packages are found in the requirements.txt file. Install using pip
 For example 
 `pip install -r requirements.txt `
 
-### Make executable
----------------
-Compiling the script to an executable is optional, but can help people who are not familiar with python use the command line tool.  
 
-To deploy as an executable, I recommend using [pyinstaller](https://www.pyinstaller.org/).
-
-Install pyinstaller, then compile the project by executing the following command:
-
-pyinstaller compare.py -F -n compare_excel -i ./icon/icon.ico
-
-1. The -F flag is for a one-file bundled executable
-2. The -n flag gives the bundled app a name
-3. The -i flag assigns an icon to the application
-
-This will create a directory called "dist" in the project directory with containing your executable. Distribute the executable to your users.
-
-On Windows, you may need to install some microsoft packages, like the VC++ redistributable package, prior to being able to compile the application.
-
-### Using the tool
+## Using the tool
 --------------
 For more information about parameters and options, pass the argument "--help" to the tool.
 
-#### Positional arguments
+
+1.  Call the utility by passing in 3 file paths for left input, right input, and output files.
+1.  if you want input files to be sorted and lined up by a specified column first, you must pass set --compare_type to "sorted" and --sort_column to a numeric value corresponding to the column you want to sort by (1-based, so first column = 1)
+2.  If you want to open the output file automatically, set --open to True
+3.  If your file does not have headers, pass the arguments --has_headers False
+
+
+### Arguments
+This section was copied from the --help documentation.  
+
   left                  
   Path to first file for comparison. Can be CSV or XLSX.
                         In output file, these values will be on left
@@ -111,13 +103,26 @@ optional arguments:
 
 
 
-1.  Call the utility by passing in 3 file paths for left input, right input, and output files.
-1.  if you want input files to be sorted and lined up by a specified column first, you must pass set --compare_type to "sorted" and --sort_column to a numeric value corresponding to the column you want to sort by (1-based, so first column = 1)
-2.  If you want to open the output file automatically, set --open to True
-3.  If your file does not have headers, pass the arguments --has_headers False
 
+## Make executable
+---------------
+Compiling the script to an executable is optional, but can help people who are not familiar with python use the command line tool.  
 
-## Troubleshooting
+To deploy as an executable, I recommend using [pyinstaller](https://www.pyinstaller.org/).
+
+Install pyinstaller, then compile the project by executing the following command:
+
+pyinstaller compare.py -F -n compare_excel -i ./icon/icon.ico
+
+1. The -F flag is for a one-file bundled executable
+2. The -n flag gives the bundled app a name
+3. The -i flag assigns an icon to the application
+
+This will create a directory called "dist" in the project directory with containing your executable. Distribute the executable to your users.
+
+On Windows, you may need to install some microsoft packages, like the VC++ redistributable package, prior to being able to compile the application.
+
+### Troubleshooting
 
 If you get an error like this then you need to install the Microsoft Visual C++ package.
 
