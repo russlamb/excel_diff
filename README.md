@@ -112,7 +112,7 @@ To deploy as an executable, I recommend using [pyinstaller](https://www.pyinstal
 
 Install pyinstaller, then compile the project by executing the following command:
 
-pyinstaller compare.py -F -n compare_excel -i ./icon/icon.ico
+pyinstaller compare.py -F -n compare_excel -i icon.ico
 
 1. The -F flag is for a one-file bundled executable
 2. The -n flag gives the bundled app a name
